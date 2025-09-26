@@ -66,8 +66,9 @@ public class ApiLogAspect {
             targetLogger.info("调用结束:{}, 返回值:{}, 耗时:{}, 描述:{}",
                     methodName, objectMapper.writeValueAsString(result), endTime - startTime, desc);
         }catch (Exception ex){
-            targetLogger.error("接口调用异常:{}, 参数:{}, 描述:{}",
-                    methodName, args, desc, ex);
+            targetLogger.error("接口调用异常:{}, 参数:{}, 描述:{}, 异常原因:{}",
+//                    methodName, args, desc, ex);
+                    methodName, args, desc, ex.getMessage());
             throw ex;
         }
         return result;

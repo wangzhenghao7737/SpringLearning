@@ -1,9 +1,0 @@
-spring:
-  application:
-    name: Springdoc
-  profiles:
-    active: dev
-
-springdoc:
-  packages-to-scan: com.openapi.springdoc.controller
-#  paths-to-match: /user/**
